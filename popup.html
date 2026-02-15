@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi AI Searcher</title>
+  <style>
+    body {
+      width: 320px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 15px;
+      background-color: #202124;
+      /* ダーク背景 */
+      color: #e8eaed;
+      /* 明るいテキスト */
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 16px;
+      color: #e8eaed;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #5f6368;
+      /* 枠線を暗めに */
+      background-color: #303134;
+      /* 入力欄背景 */
+      color: #e8eaed;
+      border-radius: 6px;
+      resize: vertical;
+      font-size: 14px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    textarea::placeholder {
+      color: #9aa0a6;
+    }
+
+    .options {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .options input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .options label {
+      font-size: 13px;
+      color: #e8eaed;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #8ab4f8;
+      /* ダークモードでも見やすい青 */
+      color: #202124;
+      /* ボタン内テキストは濃く */
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #aecbfa;
+    }
+
+    .note {
+      font-size: 11px;
+      color: #9aa0a6;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Multi AI Searcher</h2>
+  <textarea id="promptInput" placeholder="Enter your question here..."></textarea>
+
+  <div class="options">
+    <input type="checkbox" id="newChatCheckbox">
+    <label for="newChatCheckbox">New Chat</label>
+  </div>
+
+  <button id="searchBtn">Search</button>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
